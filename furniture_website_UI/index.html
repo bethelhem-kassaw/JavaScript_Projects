@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="https://kit.fontawesome.com/a7c3d084af.js" crossorigin="anonymous"></script>
+
+    <title>Furniture app</title>
+    
+</head>
+<body class="">
+    <script>
+        fetch('headerContent.html')
+          .then(response => response.text())
+          .then(content => {
+            const includedContentDiv = document.getElementById('headerContent');
+            includedContentDiv.innerHTML = content;
+          });
+          fetch('heroSection.html')
+          .then(response => response.text())
+          .then(content => {
+            const includedContentDiv = document.getElementById('heroSection');
+            includedContentDiv.innerHTML = content;
+          });
+          fetch('sidebar.html')
+          .then(response => response.text())
+          .then(content => {
+            const includedContentDiv = document.getElementById('sidebar');
+            includedContentDiv.innerHTML = content;
+          });
+          fetch('category.html')
+          .then(response => response.text())
+          .then(content => {
+            const includedContentDiv = document.getElementById('category');
+            includedContentDiv.innerHTML = content;
+          });
+          fetch('products.html')
+          .then(response => response.text())
+          .then(content => {
+            const includedContentDiv = document.getElementById('products');
+            includedContentDiv.innerHTML = content;
+          });
+      </script>
+    <div class="flex flex-row divide-x h-screen w-[100%] ">
+        <!-- side bar -->
+        <div class="flex-none w-[17%] py-6 justify-center px-4 h-full" id="sidebar"></div>
+        <div class="flex-1 overflow-x-hidden ">
+            <!-- header  -->
+            <div class=" h-[80px] w-full    py-6 px-12" id="headerContent">
+
+            </div>
+            <!-- body  -->
+            <div class="px-12 w-full  ">
+            <div class=" mt-6 " id="heroSection">
+
+            </div>
+            <div class=" w-full overflow-x-auto mt-5 " id="category">
+
+            </div>
+            <p class="mt-10 font-bold text-lg">
+                All Products
+            </p>
+            <div class=" w-full mb-10" id="products">
+
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</body>
+</html>
