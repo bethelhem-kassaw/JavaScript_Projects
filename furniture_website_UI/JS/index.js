@@ -58,3 +58,29 @@
             openButton.addEventListener('click', openSidebar);
             closeButton.addEventListener('click', closeSidebar);
           });
+          document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.sidebar a');
+          
+            // Check if any links exist
+            if (!links || links.length === 0) {
+              console.error('No links found.');
+              return;
+            }
+          
+            // Add click event listeners to the links
+            links.forEach(function (link) {
+              link.addEventListener('click', function (event) {
+                event.preventDefault();
+          
+                // Reset the styles of all parent div elements
+                links.forEach(function (link) {
+                  link.parentElement.style.borderLeft = 'none';
+                  link.querySelector('i').style.color = 'black';
+                });
+          
+                // Apply styles to the parent div of the clicked link
+                link.parentElement.style.borderLeft = '2px solid red'; // Change the left side of the border to red
+                link.querySelector('i').style.color = 'red'; // Change the icon color to red
+              });
+            });
+          });
