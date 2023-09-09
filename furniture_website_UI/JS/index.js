@@ -1,25 +1,4 @@
 
-          fetch('heroSection.html')
-          .then(response => response.text())
-          .then(content => {
-            const includedContentDiv = document.getElementById('heroSection');
-            includedContentDiv.innerHTML = content;
-          });
-          
-          fetch('category.html')
-          .then(response => response.text())
-          .then(content => {
-            const includedContentDiv = document.getElementById('category');
-            includedContentDiv.innerHTML = content;
-          });
-          fetch('products.html')
-          .then(response => response.text())
-          .then(content => {
-            const includedContentDiv = document.getElementById('products');
-            includedContentDiv.innerHTML = content;
-          });
-
-          
           document.addEventListener('DOMContentLoaded', function () {
             const sidebar = document.querySelector('#sidebarContent');
             const sidebarClosedContent = document.querySelector('#sidebarClosedContent');
