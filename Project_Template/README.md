@@ -1,0 +1,14 @@
+- project-template
+  - index.html
+  - css
+    - styles.css
+  - js
+    - main.js
+    - router.js
+  - pages
+    - home.html
+    - productList.html
+    - productDetail.html
+  - Assets 
+    - images
+      - (your image files)
